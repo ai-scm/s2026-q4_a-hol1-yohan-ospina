@@ -21,13 +21,13 @@ El flujo toma datos semiestructurados/no estructurados en formato CSV, los trans
                   ▼
   ┌────────────────────────────────┐
   │       AWS Lambda (Python)      │
-  │  BLD_tiss_IT_Workshop_yohan    │
+  │ bld_tseed_Workshop_yohan_ospina│
   └───────────────┬────────────────┘
                   │
                   ▼
   ┌────────────────────────────────┐
   │   Amazon S3 (Output Bucket)    │
-  │   yohan_ospina/user_*.json     │
+  │   yohan_ospina/                │
   └───────────────┬────────────────┘
                   │
                   ▼
