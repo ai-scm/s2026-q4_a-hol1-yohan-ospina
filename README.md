@@ -1,13 +1,8 @@
-# 🛠️ HandsOnLab 1: AWS Data Engineering Pipeline (S3 + Lambda + Glue + Athena)
-
-**Autor:** Yohan Sebastian Ospina Gonzalez  
-**Organización:** Blend360 (`ai-scm`)  
-**Código de Proyecto:** `[P2083] BND - INTERN - semillero-2026-q4_a`  
-**Repositorio GitHub:** `s2026q4a-hol1-yohanospina`  
+HandsOnLab 1: AWS Data Engineering Pipeline (S3 + Lambda + Glue + Athena)
 
 ---
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto documenta la implementación de un **Pipeline Serverless de Procesamiento y Analítica de Datos** en Amazon Web Services (AWS) desarrollado durante el HandsOnLab 1 (HOL 1) del programa de Semilleros Blend360.
 
@@ -15,7 +10,7 @@ El flujo toma datos semiestructurados/no estructurados en formato CSV, los trans
 
 ---
 
-## 🏗️ Arquitectura del Pipeline
+## Arquitectura del Pipeline
 
 ```
   ┌────────────────────────────────┐
@@ -50,7 +45,7 @@ El flujo toma datos semiestructurados/no estructurados en formato CSV, los trans
 
 ---
 
-## 🛠️ Componentes e Implementación
+## Componentes e Implementación
 
 ### 1. Almacenamiento Inicial (Amazon S3 Input)
 * **Bucket origen:** `bld-tseed-workshop-input-semillero-2026-q4-a`
