@@ -53,23 +53,21 @@ El flujo toma datos semiestructurados/no estructurados en formato CSV, los trans
 * **Archivo de entrada:** Dataset CSV de 100 registros.
 
 ### 2. Procesamiento Serverless (AWS Lambda)
-* **Nombre de la función:** `BLD_tiss_IT_Workshop_yohan_ospina`
-* **Runtime:** Python 3.x
-* **Capa adicionada (Layer):** AWS SDK / Pandas Layer (`AWSDataWrangler-Python3x`)
+* **Nombre de la función:** `bld-tseed-workshop-yohan-ospina`
+* **Runtime:** Python 3
 * **Configuración:**
   * **Timeout:** Incrementado a 2 minutos.
-  * **Permisos IAM:** Lectura sobre S3 Input (`s3:GetObject`), escritura sobre S3 Output (`s3:PutObject`) y generación de métricas en CloudWatch Logs.
 * **Lógica:** El script `lambda_function.py` lee el archivo CSV de entrada, parsea cada fila utilizando `pandas` y exporta **100 archivos JSON independientes** en la subcarpeta del bucket de salida.
 
 ### 3. Almacenamiento Transformado (Amazon S3 Output)
 * **Bucket destino:** `bld-tseed-workshop-output-semillero-2026-q4-a`
 * **Subcarpeta:** `yohan_ospina/`
-* **Estructura generada:** 100 archivos estructurados (`user_1.json`, `user_2.json`, ..., `user_100.json`).
+* **Estructura generada:** 100 archivos estructurados (`fila_1.json`, `fila_2.json`, ..., `fila_100.json`).
 
 ### 4. Catalogación Automática (AWS Glue)
-* **Crawler:** `BLD-TC-Workshop-YohanOspina`
+* **Crawler:** `bld-tseed-workshop-yohan-ospina`
 * **Data Source:** `s3://bld-tseed-workshop-output-semillero-2026-q4-a/yohan_ospina/`
-* **Database Target:** `BLDTC Workshop`
+* **Database Target:** `bld-tseed-workshop`
 * **Resultado:** Inferencia automática del esquema (columnas como `age`, `languages`, `education`, etc.) y creación de la tabla analítica.
 
 ### 5. Consultas Analíticas (Amazon Athena)
