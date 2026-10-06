@@ -1,4 +1,4 @@
-HandsOnLab 1: AWS Data Engineering Pipeline (S3 + Lambda + Glue + Athena)
+# HandsOnLab 1: AWS Data Engineering Pipeline (S3 + Lambda + Glue + Athena)
 
 ---
 
@@ -86,10 +86,3 @@ SELECT name, age, languages
 FROM "BLDTC Workshop"."bld_tseed_workshop_output_yohan_ospina"
 WHERE CAST(age AS INT) > 35 AND languages LIKE '%English%';
 ```
-
----
-
-## 📁 Archivos en este Repositorio
-
-* `lambda_function.py`: Código fuente en Python ejecutado en AWS Lambda.
-* `README.md`: Documentación técnica detallada de la arquitectura y ejecución del HandsOnLab 1.
